@@ -6,6 +6,41 @@ var cors = require('cors');
 var app = express();
 app.use(cors())
 
+app.get('/data/chart5', function (req, res){
+res.send([
+       {
+           key: "One",
+           y: 5
+       },
+       {
+           key: "Two",
+           y: 2
+       },
+       {
+           key: "Three",
+           y: 9
+       },
+       {
+           key: "Four",
+           y: 7
+       },
+       {
+           key: "Five",
+           y: 4
+       },
+       {
+           key: "Six",
+           y: 3
+       },
+       {
+           key: "Seven",
+           y: .5
+       }
+   ])
+
+});
+
+
 app.get('/data/chart1', function (req, res) {
 
   // TODO devolver random o procedentes de base de datos

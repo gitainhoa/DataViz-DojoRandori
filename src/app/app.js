@@ -374,37 +374,12 @@ angular
             }
       };
 
-     this.chart5.data = [
-            {
-                key: "One",
-                y: 5
-            },
-            {
-                key: "Two",
-                y: 2
-            },
-            {
-                key: "Three",
-                y: 9
-            },
-            {
-                key: "Four",
-                y: 7
-            },
-            {
-                key: "Five",
-                y: 4
-            },
-            {
-                key: "Six",
-                y: 3
-            },
-            {
-                key: "Seven",
-                y: .5
-            }
-        ];
+     this.chart5.data = {};
 
-
+     $http.get("http://localhost:7001/data/chart5")
+       .then((response) => {
+         
+         this.chart5.data = response.data
+       });
     }
   });
